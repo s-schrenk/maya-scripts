@@ -8,10 +8,18 @@ from collections import defaultdict
 
 """
 
-	first all files needs to be found in alls subfolders of a given folder.
+	Automatic Version:
+	first all files needs to be found in all subfolders of a given folder.
 	Each subfolder containing files is a shader. The shader setup is defined by the files found in the subfolder(e.g. diffuse albedo glossines)
 	A node ist created for each file needed to create the shader and connected to the shader
 	special nodes like bump, displacement or reverse are created and connected to the file after the file node is created. After that the node is connected to the shader.
+
+	Manual:
+	browse folder
+	list all files
+	assign files to which part of the shader they belong
+	Maybe select base shader preset and replace connections(if any)
+
 
 """
 
@@ -39,7 +47,7 @@ class FileAndFolderHandling() :
 	def getSubfolderAndImageFileNames(self) :
 
 		subfolder = ""
-		# files_in_subfolder = 
+		# files_in_subfolder =
 
 		for filename in glob.iglob('J:\\00_textures lib\\Gametextures\\textures\\Asphalt\\**\\*.tif', recursive=True) :
 			subfolder = os.path.dirname(filename) # new subfolder
